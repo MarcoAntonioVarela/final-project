@@ -20,7 +20,7 @@ List of top priority ("must have") requirements.
 ----------------------------------------------------
 
 List of lower priority ("nice to have") requirements.
-5)	A box displaying the incoming shape that will show up on screen
-6)	Each shape will be a different flag
-7)	Some sounds each time the user matches the shapes in a line, also it would be nice to add some sounds when the user starts the game and when it is game over
-8)	A box showing the score/ points (when the user matches a line)
+1)	A box displaying the incoming shape that will show up on screen
+2)	Each shape will be a different flag
+3)	Some sounds each time the user matches the shapes in a line, also it would be nice to add some sounds when the user starts the game and when it is game over
+4)	A box showing the score/ points (when the user matches a line)
