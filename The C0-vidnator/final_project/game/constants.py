@@ -10,7 +10,6 @@ DEFAULT_TEXT_OFFSET = 4
 
 IMAGE_COVID = os.path.join(os.getcwd(), "./final_project/assets/covid.png")
 IMAGE_SANITIZER = os.path.join(os.getcwd(), "./final_project/assets/sanitizer.png")
-IMAGE_COVID_ATTACK = os.path.join(os.getcwd(), "./final_project/assets/covid_attack.png")
 IMAGE_ATTACK = os.path.join(os.getcwd(), "./final_project/assets/attack.png")
 IMAGE_MASK = os.path.join(os.getcwd(), "./final_project/assets/mask.png")
 IMAGE_TITLE = os.path.join(os.getcwd(), "./final_project/assets/title.png")
@@ -25,7 +24,6 @@ ATTACK_Y = MAX_Y - 125
 
 ATTACK_DX = 8
 ATTACK_DY = ATTACK_DX * -1
-
 
 SANITIZER_X = MAX_X / 2
 SANITIZER_Y = MAX_Y - 25
@@ -52,15 +50,3 @@ ATTACK_HEIGHT = 24
 
 CSE210_WIDTH = 40
 CSE210_HEIGHT = 30
-
-
-#### Covid attack
-
-COVID_ATTACK_WIDTH = 24
-COVID_ATTACK_HEIGHT = 24
-
-COVID_ATTACK_X = MAX_X / 2
-COVID_ATTACK_Y = MAX_Y - 125
-
-COVID_ATTACK_DX = 8
-COVID_ATTACK_DY = COVID_ATTACK_DX * -1
