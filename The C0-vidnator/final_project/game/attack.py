@@ -12,7 +12,7 @@ class Attack(Actor):
         self._height = constants.ATTACK_HEIGHT
         self._width = constants.ATTACK_WIDTH
 
-        point = Point(-7,-5)
+        point = Point(0,-14)
         self._velocity = point
 
         self._position = Point(x_location,y_location)
