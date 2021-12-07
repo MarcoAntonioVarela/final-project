@@ -16,7 +16,6 @@ from game.physics_service import PhysicsService
 from game.audio_service import AudioService
 from game.covid import Covid
 from game.move_actors_action import MoveActorsAction
-from game.handle_off_screen_action import Handle_Off_Screen_Action
 from game.sanitizer import Sanitizer
 from game.mask import Mask
 
@@ -27,7 +26,6 @@ from game.attack import Attack
 from game.sanitizer import Sanitizer
 from game.control_actors_action import ControlActorsAction
 from game.handle_collisions_action import HandleCollisionsAction
-from game.handle_off_screen_action import Handle_Off_Screen_Action
 from game.move_actors_action import MoveActorsAction
 
 def main():
@@ -35,6 +33,7 @@ def main():
     # create the cast {key: tag, value: list}
     cast = {} 
     cast["covids"] = []
+    cast["attacks"] = []
      
     for y in range(4):
         
@@ -78,10 +77,7 @@ def main():
     
 
 
-    cast["attacks"] = []
 
-    attack = Attack(450,770)
-    cast["attacks"].append(attack)
 
     # TODO: Create a attack here and add it to the list
 
@@ -103,13 +99,13 @@ def main():
     
     control_actors_action = ControlActorsAction(input_service)
     draw_actors_action = DrawActorsAction(output_service)
-    handle_off_screen_action = Handle_Off_Screen_Action()
     handle_collisions_action = HandleCollisionsAction()
 
     # TODO: Create additional actions here and add them to the script
 
     script["input"] = [control_actors_action]
-    script["update"] = [move_actors_action,handle_off_screen_action,handle_collisions_action]
+    script["update"] = [move_actors_action,handle_collisions_action]
+    #script["update"] = [move_actors_action,handle_off_screen_action,handle_collisions_action]
     
     script["output"] = [draw_actors_action]
 
