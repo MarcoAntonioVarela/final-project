@@ -37,11 +37,6 @@ class InputService:
         if self.is_right_pressed():
             dx = 1
         
-        # if self.is_up_pressed():
-        #     dy = -1
-        
-        # if self.is_down_pressed():
-        #     dy = 1
 
         direction = Point(dx, dy)
         return direction
@@ -51,12 +46,6 @@ class InputService:
 
     def is_right_pressed(self):
         return pyray.is_key_down(pyray.KEY_RIGHT)
-
-    # def is_up_pressed(self):
-    #     return pyray.is_key_down(pyray.KEY_UP)
-
-    # def is_down_pressed(self):
-    #     return pyray.is_key_down(pyray.KEY_DOWN)
 
     def window_should_close(self):
         return pyray.window_should_close()
