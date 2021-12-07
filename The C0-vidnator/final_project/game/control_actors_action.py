@@ -25,7 +25,7 @@ class ControlActorsAction(Action):
         sanitizer.set_velocity(direction.scale(constants.SANITIZER_SPEED)) 
         
 
-        if space == True and self.timer % 15 == 0:
+        if space == True and self.timer % 12 == 0:
             
             bulled_position = sanitizer.get_position()
             bullet_x = bulled_position.get_x()
