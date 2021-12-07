@@ -1,6 +1,7 @@
 from game.actor import Actor
 from game.point import Point
 from game import constants
+import random
 
 class Covid(Actor):
     def __init__(self,x_location,y_location):
@@ -12,8 +13,17 @@ class Covid(Actor):
 
         self._position = Point(x_location,y_location) 
 
-    def get_position(self):
-        return self._position
+
+#We are using polymorphism here, same function, same name, but with a different function
+    def get_velocity(self):
+        x = random.randint(-4,4)
+        y = random.randint(-5,5)
+        velocity = Point(x,y)
+
+        
+
+        return velocity
+
     
         
     
