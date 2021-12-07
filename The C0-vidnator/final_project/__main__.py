@@ -18,6 +18,7 @@ from game.covid import Covid
 from game.move_actors_action import MoveActorsAction
 from game.sanitizer import Sanitizer
 from game.mask import Mask
+#from game.covid_attack import Covid_attack
 
 
 #TODO: Add imports similar to the following when you create these classes
@@ -34,11 +35,11 @@ def main():
     cast = {} 
     cast["covids"] = []
     cast["attacks"] = []
-     
+   # cast["covid_attacks"]
     for y in range(4):
         
         for x in range(11):
-            covid = Covid((x*90) ,(y*74))
+            covid = Covid((x*90) ,(y*74))  
             cast["covids"].append(covid)
 
     
@@ -112,7 +113,7 @@ def main():
 
 
     # Start the game
-    output_service.open_window("The C0-vidnator by Marco Varela");
+    output_service.open_window("The C0-vidnator by Marco Varela")
     audio_service.start_audio()
     audio_service.play_sound(constants.SOUND_START)
     
