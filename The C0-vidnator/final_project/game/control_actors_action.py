@@ -4,7 +4,8 @@ from game.point import Point
 from game.action import Action
 from game import constants
 from game.attack import Attack
-
+from game.covid_attack import Covid_Attack
+import random
 
 class ControlActorsAction(Action):
 
@@ -13,6 +14,8 @@ class ControlActorsAction(Action):
         self._input_service = input_service
         self.timer = 0
         
+        
+
 
     def execute(self,cast):
 
@@ -24,12 +27,40 @@ class ControlActorsAction(Action):
         sanitizer = cast["sanitizer"][0]
         sanitizer.set_velocity(direction.scale(constants.SANITIZER_SPEED)) 
         
-
-        if space == True and self.timer % 12 == 0:
-            
-            bulled_position = sanitizer.get_position()
-            bullet_x = bulled_position.get_x()
-            bulley_y = bulled_position.get_y()
-            attack = Attack(bullet_x,bulley_y)
-            cast["attacks"].append(attack)
+         
         
+
+        if space == True and self.timer % 9 == 0:
+            
+            bullet_position = sanitizer.get_position()
+            bullet_x = bullet_position.get_x()
+            bulley_t = bullet_position.get_y()
+            attack = Attack(bullet_x,bulley_t)
+            cast["attacks"].append(attack)
+
+
+
+### Making the covids to randonmly shoot miny covids
+
+
+        if self.timer % 5 == 0:
+
+            random_modulo = random.randint(0,30)
+            covid_direction = self._input_service.get_direction()
+            covid = cast["covids"][random_modulo]
+            covid.set_velocity(covid_direction.scale(constants.COVID_SPEED))
+            covid_bullet_position = covid.get_position()
+            covid_bullet_x = covid_bullet_position.get_x()
+            covid_bullet_y = covid_bullet_position.get_y()
+            covid_attack = Covid_Attack(covid_bullet_x,covid_bullet_y)
+            cast["covid_attacks"].append(covid_attack)
+
+    
+            
+                   
+                        
+ 
+
+
+
+            

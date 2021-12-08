@@ -11,6 +11,7 @@ class Covid_Attack(Actor):
         self._image = constants.IMAGE_COVID_ATTACK
         self._height = constants.COVID_ATTACK_HEIGHT
         self._width = constants.COVID_ATTACK_WIDTH
+        
 
         point = Point(0,14)
         self._velocity = point
@@ -19,3 +20,9 @@ class Covid_Attack(Actor):
 
     def get_position(self):
         return self._position
+
+    
+
+
+
+        
