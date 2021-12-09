@@ -34,15 +34,4 @@ class HandleCollisionsAction(Action):
                     cast["covids"].remove(covid)
                     cast["attacks"].remove(attack)
 
-   # collission = physics.is_collision(collission_attack,collission_sanitizer)
-               
 
-
-        # if collission == True:
-        #     attack_velocity = collission_attack.get_velocity()
-        #     sound.play_sound(constants.SOUND_BOUNCE)
-        #     dy =attack_velocity.get_y()
-        #     dy *= -1 
-        #     new_velocity = Point(attack_velocity.get_x(),dy)
-        #     collission_attack.set_velocity(new_velocity)
- 
