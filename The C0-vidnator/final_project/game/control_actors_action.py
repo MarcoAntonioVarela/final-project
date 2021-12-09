@@ -30,7 +30,7 @@ class ControlActorsAction(Action):
          
         
 
-        if space == True and self.timer % 9 == 0:
+        if space == True and self.timer % 8 == 0:
             
             bullet_position = sanitizer.get_position()
             bullet_x = bullet_position.get_x()
@@ -43,9 +43,12 @@ class ControlActorsAction(Action):
 ### Making the covids to randonmly shoot miny covids
 
 
-        if self.timer % 5 == 0:
+        if self.timer % 7 == 0:
 
-            random_modulo = random.randint(0,30)
+            total_covids = len(cast["covids"]) -1
+
+
+            random_modulo = random.randint(0,total_covids)
             covid_direction = self._input_service.get_direction()
             covid = cast["covids"][random_modulo]
             covid.set_velocity(covid_direction.scale(constants.COVID_SPEED))
