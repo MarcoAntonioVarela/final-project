@@ -18,6 +18,7 @@ from game.sanitizer import Sanitizer
 from game.mask import Mask
 from game.control_actors_action import ControlActorsAction
 from game.handle_collisions_action import HandleCollisionsAction
+from game.handle_off_screen import Handle_Off_Screen_Action
 
 
 def main():
@@ -36,7 +37,7 @@ def main():
     cast["titles"]= []
     cast["CSE210S"]= []
     cast["sanitizer"] = []
-    sanitizer = Sanitizer(445,790)
+    sanitizer = Sanitizer(5,800)
     cast["sanitizer"].append(sanitizer)
 
 
@@ -54,7 +55,7 @@ def main():
             cast["masks"].append(mask)
 
 #I have created a for loop in order to create and append 1 title holding my information 
-    for y in range (1,2):
+    for y in range (1,2):          
         for x in range(1,2):
             title = Title((x*820) ,(y*850))
             cast["titles"].append(title)
@@ -81,12 +82,13 @@ def main():
     control_actors_action = ControlActorsAction(input_service)
     draw_actors_action = DrawActorsAction(output_service)
     handle_collisions_action = HandleCollisionsAction()
+    handle_off_screen_action = Handle_Off_Screen_Action()
 
     # TODO: Create additional actions here and add them to the script
 
     script["input"] = [control_actors_action]
-    script["update"] = [move_actors_action,handle_collisions_action]
-    #script["update"] = [move_actors_action,handle_off_screen_action,handle_collisions_action]
+    #script["update"] = [move_actors_action,handle_collisions_action]
+    script["update"] = [move_actors_action,handle_off_screen_action,handle_collisions_action]
     
     script["output"] = [draw_actors_action]
 
