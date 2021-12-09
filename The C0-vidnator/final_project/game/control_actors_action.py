@@ -43,7 +43,7 @@ class ControlActorsAction(Action):
 ### Making the covids to randonmly shoot miny covids
 
 
-        if self.timer % 7 == 0:
+        if self.timer % 5 == 0:
 
             total_covids = len(cast["covids"]) -1
 
