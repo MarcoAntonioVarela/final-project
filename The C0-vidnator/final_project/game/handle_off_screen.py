@@ -26,9 +26,9 @@ class Handle_Off_Screen_Action(Action):
                 new_position =Point(new_x,new_y)
                 covid.set_position(new_position)
 
-            if x >= 985:
+            if x >= 960:
                 
-                new_x =984
+                new_x =955
                 new_y = y
                 new_position =Point(new_x,new_y)
                 covid.set_position(new_position)
