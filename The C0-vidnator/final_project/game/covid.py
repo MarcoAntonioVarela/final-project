@@ -17,7 +17,7 @@ class Covid(Actor):
 #We are using polymorphism here, same function, same name, but with a different function
     def get_velocity(self):
         x = random.randint(-4,4)
-        y = random.randint(-5,5)
+        y = random.randint(-4,4)
         velocity = Point(x,y)
 
         
