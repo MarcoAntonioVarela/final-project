@@ -21,6 +21,7 @@ from game.handle_collisions_action import HandleCollisionsAction
 from game.handle_off_screen import Handle_Off_Screen_Action
 
 
+
 def main():
             
    
@@ -36,10 +37,12 @@ def main():
     cast["masks"]= []
     cast["titles"]= []
     cast["CSE210S"]= []
+    cast["game_over"]= []
+    cast["victory"]= []
     cast["sanitizer"] = []
-    sanitizer = Sanitizer(5,800)
+    sanitizer = Sanitizer(300,800)
     cast["sanitizer"].append(sanitizer)
-
+      
 
 
 #I have created a for loop in order to create and append several covids (4 lines x 11 columns)
@@ -47,13 +50,13 @@ def main():
         for x in range(11):
             covid = Covid((x*90) ,(y*74))  
             cast["covids"].append(covid)
-
-#I have created a for loop in order to create and append 3 covids (1 line x 3 columns)
+  
+#I have created a for loop in order to create and append 2 masks (1 line x 2 columns)
     for y in range (1,2):
-        for x in range(0,3):
-            mask = Mask((x*370) ,(y*660))
+        for x in range(1,3):
+            mask = Mask((x*280) ,(y*640))
             cast["masks"].append(mask)
-
+ 
 #I have created a for loop in order to create and append 1 title holding my information 
     for y in range (1,2):          
         for x in range(1,2):
@@ -71,7 +74,7 @@ def main():
 
 
     # Create the script {key: tag, value: list}
-    script = {}
+    script = {}     
 
     input_service = InputService()
     output_service = OutputService()
