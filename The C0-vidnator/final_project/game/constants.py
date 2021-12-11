@@ -6,9 +6,9 @@ MAX_X = 1000
 MAX_Y = 900
 FRAME_RATE = 30
 
-DEFAULT_SQUARE_SIZE = 20
-DEFAULT_FONT_SIZE = 20
-DEFAULT_TEXT_OFFSET = 4
+DEFAULT_SQUARE_SIZE = 290
+DEFAULT_FONT_SIZE = 120
+DEFAULT_TEXT_OFFSET = 9
 
 IMAGE_COVID = os.path.join(os.getcwd(), "./final_project/assets/covid.png")
 IMAGE_SANITIZER = os.path.join(os.getcwd(), "./final_project/assets/sanitizer.png")
@@ -17,10 +17,17 @@ IMAGE_COVID_ATTACK = os.path.join(os.getcwd(), "./final_project/assets/covid_att
 IMAGE_MASK = os.path.join(os.getcwd(), "./final_project/assets/mask.png")
 IMAGE_TITLE = os.path.join(os.getcwd(), "./final_project/assets/title.png")
 IMAGE_CSE210 = os.path.join(os.getcwd(), "./final_project/assets/cse210.png")
-SOUND_START = os.path.join(os.getcwd(), "./final_project/assets/halo.wav")
+IMAGE_GAME_OVER = os.path.join(os.getcwd(), "./final_project/assets/game_over.png")
+IMAGE_VICTORY = os.path.join(os.getcwd(), "./final_project/assets/victory.png")
 
+
+SOUND_START = os.path.join(os.getcwd(), "./final_project/assets/halo.wav")
+SOUND_VICTORY = os.path.join(os.getcwd(), "./final_project/assets/victory.wav")
+SOUND_VICTORY_BACKGROUND = os.path.join(os.getcwd(), "./final_project/assets/victory_background.wav")
 SOUND_BOUNCE = os.path.join(os.getcwd(), "./final_project/assets/water.wav")
+SOUND_DEATH = os.path.join(os.getcwd(), "./final_project/assets/covid_dying.wav")
 SOUND_OVER = os.path.join(os.getcwd(), "./final_project/assets/over.wav")
+SOUND_FINISH_HIM = os.path.join(os.getcwd(), "./final_project/assets/finish_him.wav")
 
 ATTACK_X = MAX_X / 2
 ATTACK_Y = MAX_Y - 125
@@ -34,11 +41,19 @@ SANITIZER_Y = MAX_Y - 25
 COVID_WIDTH = 67
 COVID_HEIGHT = 70
 
-MASK_WIDTH = 100
-MASK_HEIGHT = 30
+MASK_WIDTH = 205
+MASK_HEIGHT = 154
 
 TITLE_WIDTH = 40
 TITLE_HEIGHT = 30
+
+
+GAME_OVER_WIDTH = 400
+GAME_OVER_HEIGHT = 300
+
+
+VICTORY_WIDTH = 400
+VICTORY_HEIGHT = 300
 
 COVID_SPACE = 5
 
